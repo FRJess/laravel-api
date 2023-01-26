@@ -16,7 +16,8 @@ export default {
     },
 
     methods:{
-        getApi(){
+        getApi(page){
+            this.pagination.current = page;
             axios.get(this.baseUrl + 'projects', {
                 params:{
                     page: this.pagination.current
@@ -26,6 +27,7 @@ export default {
                     this.projects = result.data.projects.data;
                     this.pagination.current = result.data.projects.current_page;
                     this.pagination.last = result.data.projects.last_page;
+
                 })
         },
         truncateText(summary){
@@ -71,7 +73,7 @@ export default {
             <button class="btn btn-primary"
             v-for="i in pagination.last" :key="i"
             :disabled="pagination.current === i"
-            @onclick="getApi(i)"
+            @click="getApi(i)"
             >{{ i }}
             </button>
 
@@ -82,7 +84,7 @@ export default {
 
             <button class="btn btn-primary"
             :disabled="pagination.current === pagination.last"
-            @click="getApi(1)"
+            @click="getApi(pagination.last)"
             >|></button>
         </div>
 

@@ -12,7 +12,7 @@
  <link rel="stylesheet" href="https://fonts.bunny.net/css2?family=Nunito:wght@400;600;700&display=swap">
 
  <!-- Scripts -->
- @vite(['resources/scss/appVue.css', 'resources/js/appVue.js'])
+ @vite(['resources/scss/appVue.scss', 'resources/js/appVue.js'])
 </head>
 
 <body>
