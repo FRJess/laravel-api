@@ -56,30 +56,30 @@ export default {
             </div>
         </div>
 
-        <div class="paginator">
-            <button
+        <div class="paginator d-flex justify-content-center">
+            <button class="btn btn-primary"
             :disabled="pagination.current === 1"
             @click="getApi(1)"
             >|&lt; </button>
 
-            <button
+            <button class="btn btn-primary"
             :disabled="pagination.current === 1"
             @click="getApi(pagination.current -1)"
             >&larr;</button>
 
-            <button
+            <button class="btn btn-primary"
             v-for="i in pagination.last" :key="i"
             :disabled="pagination.current === i"
             @onclick="getApi(i)"
             >{{ i }}
             </button>
 
-            <button
+            <button class="btn btn-primary"
             :disabled="pagination.current === pagination.last"
             @click="getApi(pagination.current + 1)"
             >&rarr;</button>
 
-            <button
+            <button class="btn btn-primary"
             :disabled="pagination.current === pagination.last"
             @click="getApi(1)"
             >|></button>
