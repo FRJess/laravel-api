@@ -24,4 +24,3 @@ Route::namespace('Api')
     ->group(function(){
         Route::get('/', [ProjectController::class, 'index']);
     });
-
