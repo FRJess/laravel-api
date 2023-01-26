@@ -49,8 +49,9 @@ export default {
         <div>
             <div v-for="project in projects" :key="project.name" class="project-box">
                 <h3>{{project.name}}</h3>
+                <h4 class="badge text-bg-info">{{ project.type.name }}</h4>
                 <div class="technologies" v-if="project.technologies.length">
-                    <span v-for="technology in project.technologies" :key="technology.id">{{ technology.name }}</span>
+                    <span class="badge text-bg-secondary" v-for="technology in project.technologies" :key="technology.id">{{ technology.name }}</span>
                  </div>
                 <p v-html="truncateText(project.summary)"></p>
             </div>
