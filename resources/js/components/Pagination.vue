@@ -8,33 +8,12 @@ export default {
         return {
             baseUrl: 'http://127.0.0.1:8000/api/',
             projects : [],
-            contentMaxLenght: 150,
             pagination:{
                 current: 1,
                 last: null
             }
         }
     },
-
-    methods:{
-        getApi(page){
-            this.pagination.current = page;
-            axios.get(this.baseUrl + 'projects', {
-                params:{
-                    page: this.pagination.current
-                }
-            })
-                .then(result => {
-                    this.projects = result.data.projects.data;
-                    this.pagination.current = result.data.projects.current_page;
-                    this.pagination.last = result.data.projects.last_page;
-
-                })
-        }
-    },
-    mounted(){
-        this.getApi(1);
-    }
 
 }
 </script>

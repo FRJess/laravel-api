@@ -1,13 +1,13 @@
 <script>
 import axios from 'axios';
 import ProjectItem from '../components/ProjectItem.vue';
-// import Pagination from '../components/Pagination.vue';
+import Pagination from '../components/Pagination.vue';
 
 export default {
     name: 'App',
     components: {
         ProjectItem,
-        // Pagination
+        Pagination
     },
     data(){
         return {
