@@ -13,7 +13,7 @@ export default {
                     <router-link class="nav-link" :to="{ name: 'home'}">home</router-link>
                 </li>
                 <li class="nav-item">
-                    <router-link class="nav-link" :to="{ name: 'blog'}">blog</router-link>
+                    <router-link class="nav-link" :to="{ name: 'projects'}">projects</router-link>
                 </li>
                 <li class="nav-item">
                     <router-link class="nav-link" :to="{ name: 'about'}">about</router-link>

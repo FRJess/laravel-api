@@ -17,11 +17,11 @@ class ProjectController extends Controller
 
         $project = Project::where('slug',$slug)->with(['type','technologies','user'])->first();
 
-        if($project->image){
-            $project->image = url("storage/" . $project->image);
-        }else{
-            $project->image = url("storage/uploads/image-paceholder.jpg");
-        }
+        // if($project->image){
+        //     $project->image = url("storage/" . $project->image);
+        // }else{
+        //     $project->image = url("storage/uploads/image-paceholder.jpg");
+        // }
 
         return response()->json($project);
 

@@ -27,14 +27,14 @@ export default {
 </script>
 
 <template>
-      <h1>{{project.title}}</h1>
-      <div v-if="project.type">Categoria: {{project.type.name}}</div>
+      <h1>{{project.name}}</h1>
+      <div v-if="project.type" class="badge text-bg-info">{{ project.type.name }}</div>
+    <span class="badge text-bg-secondary" v-for="technology in project.technologies" :key="technology.id">{{ technology.name }}</span>
 
-     <span v-for="technology in project.technologies" :key="technology.id" class="tag">{{technology.name}}</span>
 
-     <div>
+     <!-- <div>
         <img :src="project.image" :alt="project.name">
-     </div>
+     </div> -->
 
      <div v-html="project.summary"></div>
 
@@ -43,6 +43,7 @@ export default {
 
 
 <style lang="scss" scoped>
+@use '../../scss/appVue.scss';
 img{
     max-width: 100%;
 }
