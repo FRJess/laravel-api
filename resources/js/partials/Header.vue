@@ -6,21 +6,19 @@ export default {
 </script>
 
 <template>
-    <div class="header text-center">
+    <div class="header">
         <nav class="navbar navbar-expand text-center navbar-dark bg-dark">
-            <div class="container-fluid">
-                <ul class="navbar-nav mb-2">
-                    <li class="nav-item">
-                        <router-link class="nav-link active" :to="{ name: 'home'}">home</router-link>
-                    </li>
-                    <li class="nav-item">
-                        <router-link class="nav-link" :to="{ name: 'about'}">about</router-link>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <router-link class="nav-link" :to="{ name: 'contacts'}">contacts</router-link>
-                    </li>
-                </ul>
-            </div>
+            <ul class="navbar-nav mb-2 ms-4">
+                <li class="nav-item">
+                    <router-link class="nav-link active" :to="{ name: 'home'}">home</router-link>
+                </li>
+                <li class="nav-item">
+                    <router-link class="nav-link" :to="{ name: 'about'}">about</router-link>
+                </li>
+                <li class="nav-item dropdown">
+                    <router-link class="nav-link" :to="{ name: 'contacts'}">contacts</router-link>
+                </li>
+            </ul>
         </nav>
 
     </div>
