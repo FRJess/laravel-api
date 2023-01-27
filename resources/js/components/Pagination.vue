@@ -1,14 +1,9 @@
 <script>
 import axios from 'axios';
-import ProjectItem from '../components/ProjectItem.vue';
-// import Pagination from '../components/Pagination.vue';
 
 export default {
-    name: 'App',
-    components: {
-        ProjectItem,
-        // Pagination
-    },
+    name: 'Pagination',
+
     data(){
         return {
             baseUrl: 'http://127.0.0.1:8000/api/',
@@ -40,20 +35,13 @@ export default {
     mounted(){
         this.getApi(1);
     }
-}
 
+}
 </script>
 
 <template>
 
-    <h1>Projects list</h1>
-
-    <ProjectItem v-for="project in projects" :key="project.id" :project="project"/>
-    <!-- <Pagination/> -->
-
-
-
-    <div class="paginator d-flex justify-content-center">
+<div class="paginator d-flex justify-content-center">
         <button class="btn btn-primary"
         :disabled="pagination.current === 1"
         @click="getApi(1)"
@@ -84,8 +72,6 @@ export default {
 
 </template>
 
-<style lang="scss">
-@use '../../scss/appVue.scss';
-
+<style>
 
 </style>
