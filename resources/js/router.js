@@ -28,6 +28,6 @@ const router = createRouter({
             component: Error404
         },
     ]
-})
+});
 
 export {router};

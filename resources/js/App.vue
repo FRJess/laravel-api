@@ -1,8 +1,12 @@
 <script>
 import axios from 'axios';
+import Header from './partials/Header.vue';
 
 export default {
     name: 'App',
+    components:{
+        Header
+    },
     data(){
         return {
             baseUrl: 'http://127.0.0.1:8000/api/',
@@ -45,10 +49,15 @@ export default {
 </script>
 
 <template>
+
+    <Header />
+
+
+    <router-view></router-view>
     <div class="container">
         <h1>Projects list</h1>
 
-        <div>
+        <!-- <div>
             <div v-for="project in projects" :key="project.name" class="project-box">
                 <h3>{{project.name}}</h3>
                 <h4 class="badge text-bg-info">{{ project.type.name }}</h4>
@@ -57,9 +66,9 @@ export default {
                  </div>
                 <p v-html="truncateText(project.summary)"></p>
             </div>
-        </div>
+        </div> -->
 
-        <div class="paginator d-flex justify-content-center">
+        <!-- <div class="paginator d-flex justify-content-center">
             <button class="btn btn-primary"
             :disabled="pagination.current === 1"
             @click="getApi(1)"
@@ -86,7 +95,7 @@ export default {
             :disabled="pagination.current === pagination.last"
             @click="getApi(pagination.last)"
             >|></button>
-        </div>
+        </div> -->
 
     </div>
 

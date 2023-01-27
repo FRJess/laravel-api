@@ -1,12 +1,14 @@
 <script>
 export default {
-    name: 'Contacts',
+    name: 'Header',
 }
 
 </script>
 
 <template>
-    <h1>Contacts</h1>
+    <header>
+        header
+    </header>
 </template>
 
 <style>
