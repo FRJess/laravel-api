@@ -30,8 +30,8 @@ export default {
     <h1 class="my-4">{{project.name}}</h1>
     <div>Client: <strong>{{ project.client_name }}</strong></div>
     <div v-if="project.type" class="">Type: <strong>{{ project.type.name }}</strong></div>
-    <div v-for="technology in project.technologies" :key="technology.id"> Technologies:
-        <span class="badge text-bg-secondary me-2">{{ technology.name }}</span>
+    <div> Technologies:
+        <span v-for="technology in project.technologies" :key="technology.id" class="badge text-bg-secondary me-2">{{ technology.name }}</span>
     </div>
 
      <div class="text-center my-4">
