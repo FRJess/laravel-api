@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
 use App\Models\Project;
+use Database\Seeders\ProjectSeeder;
 use Illuminate\Http\Request;
 
 class ProjectController extends Controller

@@ -1,13 +1,15 @@
 <script>
 import axios from 'axios';
 import { BASE_URL } from '../data/data';
+import { store } from '../data/store';
 
 
 export default {
     name:'FormSearch',
     data(){
         return{
-            tosearch: ''
+            tosearch: '',
+            store
         }
     },
     methods:{
@@ -19,6 +21,8 @@ export default {
             axios.post(BASE_URL + 'projects/search', data)
                 .then(result => {
                     this.tosearch = '';
+                    store.projects = result.data;
+                    console.log(store.projects)
 
                 })
 
