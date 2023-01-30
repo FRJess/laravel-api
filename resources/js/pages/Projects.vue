@@ -1,5 +1,6 @@
 <script>
 import axios from 'axios';
+import { BASE_URL } from '../data/data';
 import ProjectItem from '../components/ProjectItem.vue';
 import FormSearch from '../components/FormSearch.vue';
 
@@ -11,9 +12,10 @@ export default {
     },
     data(){
         return {
-            baseUrl: 'http://127.0.0.1:8000/api/',
+            BASE_URL,
             projects : [],
             contentMaxLenght: 150,
+            // active_base_url: BASE_URL + 'projects',
             pagination:{
                 current: 1,
                 last: null
@@ -24,7 +26,7 @@ export default {
     methods:{
         getApi(page){
             this.pagination.current = page;
-            axios.get(this.baseUrl + 'projects', {
+            axios.get(this.BASE_URL + 'projects', {
                 params:{
                     page: this.pagination.current
                 }
@@ -38,7 +40,7 @@ export default {
         }
     },
     mounted(){
-        this.getApi(1);
+        this.getApi(this.active_base_url);
     }
 }
 
