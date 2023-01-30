@@ -1,11 +1,13 @@
 <script>
 import axios from 'axios';
 import ProjectItem from '../components/ProjectItem.vue';
+import FormSearch from '../components/FormSearch.vue';
 
 export default {
     name: 'App',
     components: {
         ProjectItem,
+        FormSearch,
     },
     data(){
         return {
@@ -45,6 +47,7 @@ export default {
 <template>
 
     <h1>Projects list</h1>
+    <FormSearch/>
 
 
     <ProjectItem v-for="project in projects" :key="project.id" :project="project"/>

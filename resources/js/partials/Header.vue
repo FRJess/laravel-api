@@ -28,7 +28,6 @@ export default {
                         <router-link class="nav-link" :to="{ name: 'contacts'}">contacts</router-link>
                     </li>
                 </ul>
-                <FormSearch/>
             </div>
         </nav>
     </div>
