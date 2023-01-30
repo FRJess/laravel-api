@@ -1,13 +1,11 @@
 <script>
 import axios from 'axios';
 import ProjectItem from '../components/ProjectItem.vue';
-import Pagination from '../components/Pagination.vue';
 
 export default {
     name: 'App',
     components: {
         ProjectItem,
-        Pagination
     },
     data(){
         return {
@@ -50,8 +48,6 @@ export default {
 
 
     <ProjectItem v-for="project in projects" :key="project.id" :project="project"/>
-
-
 
     <div class="paginator d-flex justify-content-center">
         <button class="btn btn-primary"
