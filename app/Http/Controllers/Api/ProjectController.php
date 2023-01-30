@@ -26,4 +26,12 @@ class ProjectController extends Controller
         return response()->json($project);
 
     }
+
+    public function search(){
+        $tosearch = $_POST['tosearch'];
+
+        $projects = Project::where('name', 'like', "%$tosearch%")->with(['type','technologies','user'])->get();
+
+        return response()->json($projects);
+    }
 }
