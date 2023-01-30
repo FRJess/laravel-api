@@ -34,10 +34,8 @@ export default {
 <template>
     <nav class="navbar">
         <div class="container-fluid">
-            <form class="d-flex" role="search">
-                <input v-model.trim="tosearch" @keyup.enter="getApi" class="form-control me-2" type="search" placeholder="Search for a project" aria-label="Search">
-                <button @click="getApi" class="btn btn-outline-dark" type="submit">Search</button>
-            </form>
+            <input v-model.trim="tosearch" @keyup.enter="getApi" class="form-control me-2" type="search" placeholder="Search for a project" aria-label="Search">
+            <button @click="getApi" class="btn btn-outline-dark">Search</button>
         </div>
     </nav>
 </template>
