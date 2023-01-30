@@ -26,13 +26,12 @@ export default {
     },
 
     methods:{
-        getPage(url){
-            this.active_base_url = url;
-            this.getApi()
-        },
-        getApi(page){
-            this.pagination.current = page;
-            axios.get(this.active_base_url)
+        // getPage(url){
+        //     this.active_base_url = url;
+        //     this.getApi()
+        // },
+        getApi(url){
+            axios.get(url)
                 .then(result => {
                     store.projects = result.data.projects.data;
                     store.links = result.data.projects.links;
@@ -44,7 +43,7 @@ export default {
         }
     },
     mounted(){
-        this.getApi(1);
+        this.getApi(this.active_base_url);
     }
 }
 
@@ -62,32 +61,9 @@ export default {
         <button class="btn btn-primary"
         v-for="link in store.links" :key="link.label"
         :disabled="link.active || !link.url"
-        @click="getPage(link.url)"
+        @click="getApi(link.url)"
         v-html="link.label"
         ></button>
-
-
-        <!-- <button class="btn btn-primary"
-        :disabled="pagination.current === 1"
-        @click="getApi(pagination.current -1)"
-        >&larr;</button>
-
-        <button class="btn btn-primary"
-        v-for="i in pagination.last" :key="i"
-        :disabled="pagination.current === i"
-        @click="getApi(i)"
-        >{{ i }}
-        </button>
-
-        <button class="btn btn-primary"
-        :disabled="pagination.current === pagination.last"
-        @click="getApi(pagination.current + 1)"
-        >&rarr;</button>
-
-        <button class="btn btn-primary"
-        :disabled="pagination.current === pagination.last"
-        @click="getApi(pagination.last)"
-        >|></button> -->
     </div>
 
 </template>
