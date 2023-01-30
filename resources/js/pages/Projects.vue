@@ -50,7 +50,6 @@ export default {
 
 
     <ProjectItem v-for="project in projects" :key="project.id" :project="project"/>
-    <!-- <Pagination/> -->
 
 
 
