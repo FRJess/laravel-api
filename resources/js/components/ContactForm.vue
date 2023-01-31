@@ -60,7 +60,7 @@ export default {
             <p v-for="(error, index) in errors.message" :key="'message'+index" class="error">{{ error }}</p>
         </div>
         <div class="col-12">
-            <button type="submit" class="btn btn-primary" :disabled="loading">{{ loading ? 'Sending...' : 'Send' }}</button>
+            <button type="submit" class="btn btn-dark" :disabled="loading">{{ loading ? 'Sending...' : 'Send' }}</button>
         </div>
 
     </form>

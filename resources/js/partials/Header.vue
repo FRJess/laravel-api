@@ -12,20 +12,20 @@ export default {
 
 <template>
     <div class="header">
-        <nav class="navbar navbar-expand text-center navbar-dark bg-dark">
+        <nav class="navbar navbar-expand text-center" style="background-color: #dae5f6;">
             <div class="container-fluid">
                 <ul class="navbar-nav mb-2 ms-4">
                     <li class="nav-item">
                         <router-link class="nav-link" :to="{ name: 'home'}">home</router-link>
                     </li>
                     <li class="nav-item">
-                        <router-link class="nav-link" :to="{ name: 'projects'}">projects</router-link>
+                        <router-link class="nav-link" :to="{ name: 'projects'}">my projects</router-link>
                     </li>
                     <li class="nav-item">
                         <router-link class="nav-link" :to="{ name: 'about'}">about</router-link>
                     </li>
                     <li class="nav-item dropdown">
-                        <router-link class="nav-link" :to="{ name: 'contacts'}">Contact us</router-link>
+                        <router-link class="nav-link" :to="{ name: 'contacts'}">Contact me</router-link>
                     </li>
                 </ul>
             </div>

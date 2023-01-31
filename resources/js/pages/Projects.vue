@@ -40,26 +40,45 @@ export default {
 </script>
 
 <template>
+        <div class="jt-container">
+        <div class="container p-5">
 
-    <h1>Projects list</h1>
-    <FormSearch/>
+            <h1>My projects</h1>
+            <FormSearch/>
 
 
-    <ProjectItem v-for="project in store.projects" :key="project.id" :project="project"/>
+            <ProjectItem  v-for="project in store.projects" :key="project.id" :project="project"/>
 
-    <div v-if="store.show_paginate" class="paginator d-flex justify-content-center">
-        <button class="btn btn-primary"
-        v-for="link in store.links" :key="link.label"
-        :disabled="link.active || !link.url"
-        @click="getApi(link.url)"
-        v-html="link.label"
-        ></button>
+            <div v-if="store.show_paginate" class="paginator d-flex justify-content-center">
+                <button class="btn btn-outline-light"
+                v-for="link in store.links" :key="link.label"
+                :disabled="link.active || !link.url"
+                @click="getApi(link.url)"
+                v-html="link.label"
+                ></button>
+            </div>
+        </div>
+
     </div>
+
+
 
 </template>
 
 <style lang="scss">
 @use '../../scss/appVue.scss';
+
+.jt-container{
+    background-color: #0B192F;
+    color: white;
+    width: 100%;
+    // height: 100vh;
+    .container{
+        margin: 0;
+        padding: 0
+    }
+}
+
 
 
 </style>

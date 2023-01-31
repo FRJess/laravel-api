@@ -33,11 +33,11 @@ export default {
 
 <template>
     <nav class="navbar navbar-expand">
-        <div class="col-auto me-2">
+        <div class="col-4 me-2">
             <input v-model.trim="tosearch" @keyup.enter="getApi" class="form-control" type="search" placeholder="Search for a project" aria-label="Search">
         </div>
         <div class="col-auto">
-            <button @click="getApi" class="btn btn-outline-dark">Search</button>
+            <button @click="getApi" class="btn btn-outline-light">Search</button>
         </div>
     </nav>
 </template>

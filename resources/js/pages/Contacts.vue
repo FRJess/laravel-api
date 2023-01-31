@@ -10,7 +10,7 @@ export default {
 </script>
 
 <template>
-    <h1>Contact us</h1>
+    <h1>Contact me</h1>
     <ContactForm/>
 
 </template>

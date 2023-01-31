@@ -18,15 +18,15 @@ export default {
 </script>
 
 <template>
-    <div class="top">
+    <div class="top mt-5">
         <h5>
-            <router-link class="link-secondary jt-link" :to="{name: 'details', params:{slug: project.slug} }">{{project.name}}</router-link>
+            <router-link class="link-light jt-link" :to="{name: 'details', params:{slug: project.slug} }">{{project.name}}</router-link>
         </h5>
     </div>
 
-        <div class="badge text-bg-info">{{ project.type.name }}</div>
+        <div class="badge text-bg-light mb-2">{{ project.type.name }}</div>
         <div class="technologies" v-if="project.technologies.length">
-            <span class="badge text-bg-secondary" v-for="technology in project.technologies" :key="technology.id">{{ technology.name }}</span>
+            <span class="badge text-bg-secondary mb-2" v-for="technology in project.technologies" :key="technology.id">{{ technology.name }}</span>
         </div>
         <p v-html="truncateText(project.summary)"></p>
 

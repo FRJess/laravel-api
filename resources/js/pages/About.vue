@@ -6,15 +6,30 @@ export default {
 </script>
 
 <template>
-    <h1>About</h1>
-    <p>
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Deserunt ipsam vero qui dignissimos doloribus debitis tempore minus accusamus, facere, pariatur voluptas dicta ea blanditiis rem repellendus. Voluptate consequatur ullam exercitationem obcaecati doloremque accusamus placeat, assumenda saepe delectus, quo ut maiores? Iusto maxime soluta corrupti labore, provident consectetur. Mollitia, nemo est.
-    </p>
-    <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse recusandae atque vitae perspiciatis omnis? Maiores, deleniti eius, mollitia magni dolores fuga expedita fugit officiis magnam ab quis iure repellendus optio eaque. Dolorum odio rem, molestiae, voluptatibus accusamus laborum natus, consectetur nobis quis placeat illo alias beatae voluptatum iure id. Porro.
-    </p>
+    <div class="jt-container">
+        <div class="container p-5">
+            <h1>About me</h1>
+            <p>
+                My name is Jessica Tartaglia and I am a web developer based in Rome, Italy. My journey in this world has started on 2022 and I have now skills in HTML, CSS, PHP and JavaScript.
+            </p>
+            <p>I am taking baby steps but I am always happy to learn new things.
+            </p>
+        </div>
+    </div>
 </template>
 
-<style>
+<style lang="scss" scoped>
+@use '../../scss/appVue.scss';
+
+.jt-container{
+    background-color: #0B192F;
+    color: white;
+    width: 100%;
+    height: 100vh;
+    .container{
+        margin: 0;
+        padding: 0
+    }
+}
 
 </style>

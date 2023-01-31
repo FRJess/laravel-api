@@ -27,18 +27,22 @@ export default {
 </script>
 
 <template>
-    <h1 class="my-4">{{project.name}}</h1>
-    <div>Client: <strong>{{ project.client_name }}</strong></div>
-    <div v-if="project.type" class="">Type: <strong>{{ project.type.name }}</strong></div>
-    <div> Technologies:
-        <span v-for="technology in project.technologies" :key="technology.id" class="badge text-bg-secondary me-2">{{ technology.name }}</span>
+        <div class="jt-container">
+        <div class="container p-5">
+            <h1 class="my-4">{{project.name}}</h1>
+            <div>Client: <strong>{{ project.client_name }}</strong></div>
+            <div v-if="project.type" class="">Type: <strong>{{ project.type.name }}</strong></div>
+            <div> Technologies:
+                <span v-for="technology in project.technologies" :key="technology.id" class="badge text-bg-secondary me-2">{{ technology.name }}</span>
+            </div>
+
+             <div class="text-center my-4">
+                <img :src="project.image" :alt="project.name">
+             </div>
+
+             <div v-html="project.summary"></div>
+        </div>
     </div>
-
-     <div class="text-center my-4">
-        <img :src="project.image" :alt="project.name">
-     </div>
-
-     <div v-html="project.summary"></div>
 
 </template>
 
@@ -48,5 +52,14 @@ export default {
 @use '../../scss/appVue.scss';
 img{
     max-width: 50%;
+}
+.jt-container{
+    background-color: #0B192F;
+    color: white;
+    width: 100%;
+    .container{
+        margin: 0;
+        padding: 0
+    }
 }
 </style>
