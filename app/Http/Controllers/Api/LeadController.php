@@ -3,8 +3,10 @@
 namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
+use App\Mail\NewContact;
 use App\Models\Lead;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Validator;
 
 class LeadController extends Controller
@@ -29,7 +31,6 @@ class LeadController extends Controller
             'mail.email' => 'Mail address is not in a correct format',
             'mail.max' => 'Mail must have maximum :max characters',
             'message.required' => 'Message is required',
-            'message.max' => 'Message must have maximum :max characters',
 
         ]
     );
@@ -43,6 +44,8 @@ class LeadController extends Controller
         $new_lead = new Lead();
         $new_lead->fill($data);
         $new_lead->save();
+
+        Mail::to('info@boolfolio.com')->send(new NewContact($new_lead));
 
         return response()->json(compact('success'));
 
