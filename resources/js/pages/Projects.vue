@@ -43,7 +43,7 @@ export default {
         <div class="jt-container">
             <div class="container p-5">
 
-                <h1>My projects</h1>
+                <h1 class="mb-4">My projects</h1>
                 <FormSearch/>
 
 

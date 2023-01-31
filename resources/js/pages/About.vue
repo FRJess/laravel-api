@@ -8,7 +8,7 @@ export default {
 <template>
     <div class="jt-container">
         <div class="container p-5">
-            <h1>About me</h1>
+            <h1 class="mb-4">About me</h1>
             <p>
                 My name is Jessica Tartaglia and I am a web developer based in Rome, Italy. My journey in this world has started on 2022 and I have now skills in HTML, CSS, PHP and JavaScript.
             </p>
