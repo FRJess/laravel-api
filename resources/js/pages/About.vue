@@ -12,10 +12,9 @@ export default {
             <div>
                 Languages:
                 <ul>
-                    <li>HTML</li>
-                    <li>CSS</li>
+                    <li>HTML & CSS</li>
                     <li>JavaScript</li>
-                    <li>PHP</li>
+                    <li>PHP & MySQL</li>
                 </ul>
             </div>
             <div>
