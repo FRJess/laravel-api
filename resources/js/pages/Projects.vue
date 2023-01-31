@@ -41,25 +41,25 @@ export default {
 
 <template>
         <div class="jt-container">
-        <div class="container p-5">
+            <div class="container p-5">
 
-            <h1>My projects</h1>
-            <FormSearch/>
+                <h1>My projects</h1>
+                <FormSearch/>
 
 
-            <ProjectItem  v-for="project in store.projects" :key="project.id" :project="project"/>
+                <ProjectItem  v-for="project in store.projects" :key="project.id" :project="project"/>
 
-            <div v-if="store.show_paginate" class="paginator d-flex justify-content-center">
-                <button class="btn btn-outline-light"
-                v-for="link in store.links" :key="link.label"
-                :disabled="link.active || !link.url"
-                @click="getApi(link.url)"
-                v-html="link.label"
-                ></button>
-            </div>
+                <div v-if="store.show_paginate" class="paginator d-flex justify-content-center">
+                    <button class="btn btn-outline-light"
+                    v-for="link in store.links" :key="link.label"
+                    :disabled="link.active || !link.url"
+                    @click="getApi(link.url)"
+                    v-html="link.label"
+                    ></button>
+                </div>
+             </div>
+
         </div>
-
-    </div>
 
 
 
@@ -76,7 +76,12 @@ export default {
     .container{
         margin: 0;
         padding: 0
+
     }
+}
+
+.paginator{
+    margin-top: 80px
 }
 
 
