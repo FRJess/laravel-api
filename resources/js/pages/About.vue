@@ -9,11 +9,28 @@ export default {
     <div class="jt-container">
         <div class="container p-5">
             <h1 class="mb-4">About me</h1>
-            <p>
-                My name is Jessica Tartaglia and I am a web developer based in Rome, Italy. My journey in this world has started on 2022 and I have now skills in HTML, CSS, PHP and JavaScript.
-            </p>
-            <p>I am taking baby steps but I am always happy to learn new things.
-            </p>
+            <div>
+                Languages:
+                <ul>
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>JavaScript</li>
+                    <li>PHP</li>
+                </ul>
+            </div>
+            <div>
+                Frameworks:
+                <ul>
+                    <li>VueJS</li>
+                    <li>Laravel</li>
+                </ul>
+            </div>
+            <div>
+                Libraries:
+                <ul>
+                    <li>Bootstrap</li>
+                </ul>
+            </div>
         </div>
     </div>
 </template>
@@ -30,6 +47,9 @@ export default {
         margin: 0;
         padding: 0
     }
+}
+ul{
+    list-style: none;
 }
 
 </style>

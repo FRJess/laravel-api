@@ -22,7 +22,7 @@ export default {
                         <router-link class="nav-link" :to="{ name: 'projects'}">my projects</router-link>
                     </li>
                     <li class="nav-item">
-                        <router-link class="nav-link" :to="{ name: 'about'}">about</router-link>
+                        <router-link class="nav-link" :to="{ name: 'about'}">about me</router-link>
                     </li>
                     <li class="nav-item dropdown">
                         <router-link class="nav-link" :to="{ name: 'contacts'}">Contact me</router-link>
