@@ -39,4 +39,13 @@ class ProjectController extends Controller
 
         return response()->json($projects);
     }
+
+    // public function getByType($id){
+    //     $list_projects = Type::where('id', $id)->with(['projects'])->first();
+    //     foreach($type->projects as $project){
+    //         $list_projects[] = Project::where('id', $project->id)->with(['type', 'technologies'])->first();
+
+    //         return response()->json($list_projects);
+    //     }
+    // }
 }
