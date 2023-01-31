@@ -25,7 +25,7 @@ export default {
                         <router-link class="nav-link" :to="{ name: 'about'}">about</router-link>
                     </li>
                     <li class="nav-item dropdown">
-                        <router-link class="nav-link" :to="{ name: 'contacts'}">contacts</router-link>
+                        <router-link class="nav-link" :to="{ name: 'contacts'}">Contact us</router-link>
                     </li>
                 </ul>
             </div>
